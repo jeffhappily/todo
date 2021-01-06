@@ -81,8 +81,7 @@ let reducer = (state, action) =>
 let make = () => {
   let (state, dispatch) = React.useReducer(reducer, initialState)
 
-  // We can use a fragment here, but we don't, because we want to style the counter
-  <div>
+  <React.Fragment>
     <input
       onKeyPress={event => {
         if (
@@ -131,5 +130,5 @@ let make = () => {
         ->React.array}
       </tbody>
     </table>
-  </div>
+  </React.Fragment>
 }
